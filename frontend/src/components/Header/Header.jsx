@@ -11,7 +11,7 @@ const navlinks = [
   },
   {
     path: '/doctors',
-    display: 'Therepists',
+    display: 'Find a Therepists',
   },
   {
     path: '/services',
@@ -80,7 +80,7 @@ const Header = () => {
             </Link>
             <Link to="/login">
               <button className="bg-primaryColor py-2 px-6 text-white font-[600] h-[44px] flex items-center justify-center rounded-[50px]">
-                Login/Signup
+                Login
               </button>
             </Link>
             <span className="md:hidden" onClick={toggleMenu}>

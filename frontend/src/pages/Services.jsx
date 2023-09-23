@@ -1,18 +1,20 @@
 
 
 import React from "react";
-import ServiceList from "../components/Services/ServiceList";
+import { services } from "../assets/data/Services";
+import ServiceCard from "../components/Services/ServiceCard"
+
 
 const Services = () => {
-    return  < div className="container">
-    <div className="xl:w-[470px] mx-auto">
-    <h2 className="heading text-center"> Our Mental Health Services</h2>
-    <p className="text__para text-center">
-    Our team of dedicated therapists is passionate about providing compassionate care and helping you on your journey towards mental well-being. 
-    </p>
+    return<section>
+       <div className="container">
+       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-[30px] mt-[30px] lg:mt-[55px]">
+      {services.map((item, index) => (
+        <ServiceCard item={item} index={index} key={index} />
+      ))}
     </div>
-    <ServiceList />
   </div>;
+  </section>
 };
 
 export default Services;
